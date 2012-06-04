@@ -32,10 +32,10 @@ end
 # f. bar = 4
 # print f.bar_history, "\n" # => should be [nil,4]
 
+# task a)
 class Numeric
   @@currencies = {'yen' => 0.013, 'euro' => 1.292, 'rupee' => 0.019, 'dollar' => 1.0}
   def method_missing(method_id)
-    print method_id,"\n"
     singular_currency = method_id.to_s.gsub( /s$/, '')
     if @@currencies.has_key?(singular_currency)
       self * @@currencies[singular_currency]
@@ -45,10 +45,40 @@ class Numeric
   end
   
   def in (curr)
-    print self,"\n"    
-         
+    self / 1.send(curr.to_s)
   end
 end
 
-print 5.dollars.in(:euros)
+# print 1.dollar.in(:euro),"\n"
+# print 1.euro.in(:dollar),"\n"
+# print 10.euros.in(:rupees),"\n"
+# print 1.dollar.in(:rupees),"\n" 
+# print 1.dollar.in(:rupees),"\n"
 
+# task b)
+
+class String
+  def palindrome?
+    self.gsub(/\W/, "").downcase == self.gsub(/\W/, "").downcase.reverse    
+  end
+end
+
+# print "foo".palindrome?
+
+# task c)
+
+module Enumerable
+  def palindrome?
+      self.collect {|x| x} == self.collect {|x| x}.reverse   
+  end
+end
+
+# print ["1","2","2","1","2","1"].palindrome?,"\n"
+# print ({"hello" => "world"}.palindrome?),"\n"
+# print (1..2).palindrome?,"\n"
+
+
+
+
+
+  
