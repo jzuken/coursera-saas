@@ -1,3 +1,6 @@
 [submodule "hw2_rottenpotatoes"]
 	path = hw2_rottenpotatoes
 	url = git@heroku.com:hollow-flower-9603.git
+[submodule "hw3_rottenpotatoes"]
+	path = hw3_rottenpotatoes
+	url = https://github.com/saasbook/hw3_rottenpotatoes.git
