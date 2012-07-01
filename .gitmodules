@@ -4,3 +4,6 @@
 [submodule "hw3_rottenpotatoes"]
 	path = hw3_rottenpotatoes
 	url = https://github.com/saasbook/hw3_rottenpotatoes.git
+[submodule "hw4_rottenpotatoes"]
+	path = hw4_rottenpotatoes
+	url = https://github.com/saasbook/hw4_rottenpotatoes.git
